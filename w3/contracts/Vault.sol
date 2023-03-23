@@ -7,8 +7,6 @@ import "./interface/IAlbertToken.sol";
 contract Vault {
     using SafeERC20 for IAlbertToken;
     address public token;
-    bytes4 private constant SELECTOR =
-        bytes4(keccak256(bytes("transfer(address,uint256)")));
     mapping(address => uint) public balances;
 
     constructor(address _addr) {
